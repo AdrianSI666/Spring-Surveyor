@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - include:
+        file: changelog/init_script.sql
+  - include:
+        file: changelog/test_data.sql
+  - include:
+      file: changelog/fix_naming.sql
+  - include:
+      file: changelog/simplify_to_only_surveys.sql
+  - include:
+      file: changelog/passcode_for_survey.sql
+  - include:
+      file: changelog/duration_to_survey.sql
+  - include:
+      file: changelog/nullable_passcode_to_survey.sql
+  - include:
+      file: changelog/answers.sql
+  - include:
+      file: changelog/answers_fix.sql
+  - include:
+      file: changelog/answers_fix_v2.sql
+  - include:
+      file: changelog/gsso_impl.sql

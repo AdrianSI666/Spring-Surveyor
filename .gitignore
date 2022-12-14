@@ -1,0 +1,7 @@
+/.idea/
+/HELP.md
+/mvnw
+/mvnw.cmd
+/target/
+/src/main/frontend/node_modules/
+/src/main/frontend/.env

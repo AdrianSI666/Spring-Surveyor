@@ -1,0 +1,32 @@
+server:
+  error:
+    include_message: always
+    include-binding-errors: always
+  port: 8090
+  servlet:
+    context-path: /api
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/quizapp
+    username: ${username}
+    password: ${password}
+    driverClassName: org.postgresql.Driver
+  jpa:
+    hibernate.ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL81Dialect
+  liquibase:
+    change-log: classpath:changelog/changelog-master.yaml
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${clientid}
+            client-secret: ${clientsecret}
+            scope: openid, profile, email
+            redirectUri: http://localhost:8090/api/users
